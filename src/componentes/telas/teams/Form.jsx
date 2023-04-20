@@ -24,7 +24,7 @@ function Form() {
                 msginvalido="Informe o nome" readonly={false}
                 maxCaracteres={50} />
             <CampoEntrada id="txtCrestURL" label="URL do Escudo" tipo="text"
-                name="crestURL" value={objeto.cresturl} onchange={handleChange}
+                name="crestURL" value={objeto.crestURL} onchange={handleChange}
                 requirido={true} msgvalido="URL do Escudo OK"
                 msginvalido="Informe a URL do escudo" readonly={false}
                 maxCaracteres={255} />
