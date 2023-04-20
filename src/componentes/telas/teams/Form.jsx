@@ -24,7 +24,7 @@ function Form() {
                 msginvalido="Informe o nome" readonly={false}
                 maxCaracteres={50} />
             <CampoEntrada id="txtElos" label="Elos" tipo="number"
-                name="elos" value={objeto.elos} onchange={handleChange}
+                name="elos" value={parseInt(objeto.elos)} onchange={handleChange}
                 requirido={true} msgvalido="Elos OK"
                 msginvalido="Informe o número de elos" readonly={false}
                 maxCaracteres={5} />
@@ -34,7 +34,7 @@ function Form() {
                 msginvalido="Informe a data de estabelecimento" readonly={false}
                 maxCaracteres={10} />
             <CampoEntrada id="txtTeamOverall" label="Overall do Time" tipo="number"
-                name="teamOverAll" value={objeto.teamoverAll} onchange={handleChange}
+                name="teamOverAll" value={parseInt(objeto.teamoverall)} onchange={handleChange}
                 requirido={true} msgvalido="Overall do Time OK"
                 msginvalido="Informe o overall do time" readonly={false}
                 maxCaracteres={5} />
