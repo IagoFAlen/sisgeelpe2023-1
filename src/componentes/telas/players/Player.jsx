@@ -10,13 +10,7 @@ function Player() {
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({
         id: "", username: "",
-        gender: "", height: "",
-        weight: "", age: "", 
-        latitude: "", longitude: "",
-        profileIconURL: "", overall: "",
-        mainposition: "", secondposition: "",
-        elos: "", team: "",
-        preDefinedGroupID: "", avaliability: ""
+        gender: "", team: ""
     });
     const [ carregando, setCarregando ] = useState(true);
     const [ listaTeams, setListaTeams ] = useState([]);

@@ -11,10 +11,7 @@ function Tabela() {
             <h1>Listagem de Players</h1>
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdicao"
             onClick={ () => {
-                setObjeto({id : 0, username : "" , gender : "", height : "", weight: "",
-                           age: "", latitude: "", longitude: "", profileIconURL: "", overall: "",
-                           mainposition: "", secondposition: "", elos: "", team : "", preDefinedGrouID: "",
-                           avaliability: ""  });
+                setObjeto({id : 0, username : "" , gender : "", team : ""});
                 setEditar(false);
                 setAlerta({status : "", message : ""});
             }}>
@@ -31,18 +28,7 @@ function Tabela() {
                                 <th scope="col">ID</th>
                                 <th scope="col">Username</th>
                                 <th scope="col">Gender</th>
-                                <th scope="col">Height</th>
-                                <th scope="col">Weight</th>
-                                <th scope="col">Age</th>
-                                <th scope="col">Latitude</th>
-                                <th scope="col">Longitude</th>
-                                <th scope="col">ProfileIconURL</th>
-                                <th scope="col">Overall</th>
-                                <th scope="col">MainPosition</th>
-                                <th scope="col">SecondPosition</th>
-                                <th scope="col">Elos</th>
                                 <th scope="col">Team</th>
-                                <th scope="col">PreDefinedGroupID</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -66,19 +52,7 @@ function Tabela() {
                                     <td>{objeto.id}</td>
                                     <td>{objeto.username}</td>
                                     <td>{objeto.gender}</td>
-                                    <td>{objeto.height}</td>
-                                    <td>{objeto.weight}</td>
-                                    <td>{objeto.age}</td>
-                                    <td>{objeto.latitude}</td>
-                                    <td>{objeto.longitude}</td>
-                                    <td>{objeto.profileIconURL}</td>
-                                    <td>{objeto.overall}</td>
-                                    <td>{objeto.mainposition}</td>
-                                    <td>{objeto.secondposition}</td>
-                                    <td>{objeto.elos}</td>
                                     <td>{objeto.team}</td>
-                                    <td>{objeto.preDefinedGrouID}</td>
-                                    <td>{objeto.avaliability}</td>
                                 </tr>
                             ))}
                         </tbody>

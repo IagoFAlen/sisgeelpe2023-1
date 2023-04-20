@@ -19,36 +19,15 @@ function Form() {
                 msginvalido="" readonly={true}
                 maxCaracteres={5} />
             <CampoEntrada id="txtNome" label="Nome" tipo="text"
-                name="teamName" value={objeto.teamname} onchange={handleChange}
+                name="teamName" value={objeto.teamName} onchange={handleChange}
                 requirido={true} msgvalido="Nome OK"
                 msginvalido="Informe o nome" readonly={false}
                 maxCaracteres={50} />
-            <CampoEntrada id="txtElos" label="Elos" tipo="number"
-                name="elos" value={objeto.elos} onchange={handleChange}
-                requirido={true} msgvalido="Elos OK"
-                msginvalido="Informe o número de elos" readonly={false}
-                maxCaracteres={5} />
-            <CampoEntrada id="txtData" label="Data de Estabelecimento" tipo="date"
-                name="dateOfEstablishment" value={objeto.dateofestablishment} onchange={handleChange}
-                requirido={true} msgvalido="Data OK"
-                msginvalido="Informe a data de estabelecimento" readonly={false}
-                maxCaracteres={10} />
-            <CampoEntrada id="txtTeamOverall" label="Overall do Time" tipo="number"
-                name="teamOverAll" value={objeto.teamoverall} onchange={handleChange}
-                requirido={true} msgvalido="Overall do Time OK"
-                msginvalido="Informe o overall do time" readonly={false}
-                maxCaracteres={5} />    
-            <CampoEntrada id="txtCoins" label="Coins" tipo="number"
-                name="coins" value={objeto.coins} onchange={handleChange}
-                requirido={true} msgvalido="Coins OK"
-                msginvalido="Informe a quantidade de coins" readonly={false}
-                maxCaracteres={10}/> 
             <CampoEntrada id="txtCrestURL" label="URL do Escudo" tipo="text"
                 name="crestURL" value={objeto.cresturl} onchange={handleChange}
                 requirido={true} msgvalido="URL do Escudo OK"
                 msginvalido="Informe a URL do escudo" readonly={false}
                 maxCaracteres={255} />
-                
         </Dialogo>
     )
 

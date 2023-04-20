@@ -11,7 +11,7 @@ function Tabela() {
             <h1>Listagem de Teams</h1>
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdicao"
             onClick={ () => {
-                setObjeto({id : 0, teamname : "" , elos : "", dateofestabliishment : "", teamoverall: "", coins: "", cresturl: "" });
+                setObjeto({id : 0, teamName : "", cresturl: "" });
                 setEditar(false);
                 setAlerta({status : "", message : ""});
             }}>
@@ -27,10 +27,6 @@ function Tabela() {
                                 <th scope="col" style={{ textAlign: 'center' }}>Ações</th>
                                 <th scope="col">ID</th>
                                 <th scope="col">Nome do Time</th>           
-                                <th scope="col">Elos</th>
-                                <th scope="col">Data de Fundação</th>
-                                <th scope="col">Ranking Geral</th>
-                                <th scope="col">Moedas</th>
                                 <th scope="col">URL do Escudo</th> 
                             </tr>
                         </thead>
@@ -54,10 +50,6 @@ function Tabela() {
                                     </td>
                                     <td scope="row">{objeto.id}</td>
                                     <td>{objeto.teamname}</td>
-                                    <td>{objeto.elos}</td>
-                                    <td>{objeto.dateofestablishment}</td>
-                                    <td>{objeto.teamoverAll}</td>
-                                    <td>{objeto.coins}</td>
                                     <td>{objeto.cresturl}</td>
                                 </tr>
                             ))}
