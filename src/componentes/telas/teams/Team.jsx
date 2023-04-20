@@ -11,10 +11,10 @@ function Team() {
     const [objeto, setObjeto] = useState({
         id: "",
         teamname: "",
-        elos: "",
+        elos: null,
         dateofestablishment: "",
-        teamoverall: "",
-        coins: "",
+        teamoverall: null,
+        coins: null,
         cresturl: ""
       });
       const [ carregando, setCarregando ] = useState();
@@ -52,7 +52,7 @@ function Team() {
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-        
+
         setObjeto({...objeto, [name] : value});
     }
  
