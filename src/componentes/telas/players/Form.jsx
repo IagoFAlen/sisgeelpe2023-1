@@ -33,13 +33,13 @@ function Form() {
                 name="height" value={objeto?.height} onchange={handleChange}
                 requirido={false} msgvalido="Altura OK"
                 msginvalido="" readonly={false}
-                maxCaracteres={10} 
+                maxCaracteres={10}
                 step="0.01" />
             <CampoEntrada id="txtWeight" label="Peso" tipo="text"
                 name="weight" value={objeto?.weight} onchange={handleChange}
                 requirido={false} msgvalido="Peso OK"
                 msginvalido="" readonly={false}
-                maxCaracteres={10} 
+                maxCaracteres={10}
                 step="0.01" />
             <CampoEntrada id="txtAge" label="Idade" tipo="number"
                 name="age" value={objeto?.age} onchange={handleChange}
@@ -50,14 +50,24 @@ function Form() {
                 name="latitude" value={objeto?.latitude} onchange={handleChange}
                 requirido={false} msgvalido="Latitude OK"
                 msginvalido="" readonly={false}
-                maxCaracteres={20} 
+                maxCaracteres={20}
                 step="0.01" />
+            <CampoEntrada id="txtMainPosition" label="Posição Principal" tipo="number"
+                name="mainPosition" value={objeto?.mainPosition} onchange={handleChange}
+                requirido={true} msgvalido="Posição Principal OK"
+                msginvalido="Por favor, selecione uma posição válida." readonly={false}
+                maxCaracteres={10} />
+            <CampoEntrada id="txtSecondPosition" label="Segunda Posição" tipo="number"
+                name="secondPosition" value={objeto?.secondPosition} onchange={handleChange}
+                requirido={true} msgvalido="Segunda Posição OK"
+                msginvalido="Por favor, selecione uma posição válida." readonly={false}
+                maxCaracteres={10} />
             <CampoEntrada id="txtLongitude" label="Longitude" tipo="text"
                 name="longitude" value={objeto?.longitude} onchange={handleChange}
                 requirido={false} msgvalido="Longitude OK"
                 msginvalido="" readonly={false}
                 maxCaracteres={20}
-                step="0.01"  />
+                step="0.01" />
             <CampoEntrada id="txtProfileIconURL" label="URL do Ícone de Perfil" tipo="text"
                 name="profileIconURL" value={objeto?.profileIconURL} onchange={handleChange}
                 requirido={false} msgvalido="URL do Ícone de Perfil OK"
