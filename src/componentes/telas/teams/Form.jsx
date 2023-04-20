@@ -39,10 +39,10 @@ function Form() {
                 msginvalido="Informe o overall do time" readonly={false}
                 maxCaracteres={5} />
             <CampoEntrada id="txtCoins" label="Coins" tipo="number"
-                name="coins" value={objeto.coins} onchange={handleChange}
+                name="coins" value={parseInt(objeto.coins)} onchange={handleChange}
                 requirido={true} msgvalido="Coins OK"
                 msginvalido="Informe a quantidade de coins" readonly={false}
-                maxCaracteres={10} />
+                maxCaracteres={10}/> 
             <CampoEntrada id="txtCrestURL" label="URL do Escudo" tipo="text"
                 name="crestURL" value={objeto.cresturl} onchange={handleChange}
                 requirido={true} msgvalido="URL do Escudo OK"
