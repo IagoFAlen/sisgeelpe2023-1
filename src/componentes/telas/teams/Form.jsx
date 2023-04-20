@@ -23,7 +23,7 @@ function Form() {
                 requirido={true} msgvalido="Nome OK"
                 msginvalido="Informe o nome" readonly={false}
                 maxCaracteres={50} />
-            <CampoEntrada id="txtElos" label="Elos" tipo="text"
+            <CampoEntrada id="txtElos" label="Elos" tipo="number"
                 name="elos" value={parseInt(objeto.elos)} onchange={handleChange}
                 requirido={true} msgvalido="Elos OK"
                 msginvalido="Informe o número de elos" readonly={false}
@@ -33,12 +33,12 @@ function Form() {
                 requirido={true} msgvalido="Data OK"
                 msginvalido="Informe a data de estabelecimento" readonly={false}
                 maxCaracteres={10} />
-            <CampoEntrada id="txtTeamOverall" label="Overall do Time" tipo="text"
+            <CampoEntrada id="txtTeamOverall" label="Overall do Time" tipo="number"
                 name="teamOverAll" value={parseInt(objeto.teamoverall)} onchange={handleChange}
                 requirido={true} msgvalido="Overall do Time OK"
                 msginvalido="Informe o overall do time" readonly={false}
                 maxCaracteres={5} />    
-            <CampoEntrada id="txtCoins" label="Coins" tipo="text"
+            <CampoEntrada id="txtCoins" label="Coins" tipo="number"
                 name="coins" value={parseInt(objeto.coins)} onchange={handleChange}
                 requirido={true} msgvalido="Coins OK"
                 msginvalido="Informe a quantidade de coins" readonly={false}
