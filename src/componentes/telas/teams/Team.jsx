@@ -10,16 +10,16 @@ function Team() {
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({
         id: "",
-        teamName: "",
+        teamname: "",
         elos: "",
-        dateOfEstablishment: "",
-        teamOverAll: "",
+        dateofestablishment: "",
+        teamoverall: "",
         coins: "",
-        crestURL: ""
+        cresturl: ""
       });
-      
+      const [ carregando, setCarregando ] = useState();
 
-    const recuperar = async id => {
+      const recuperar = async id => {
         await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams/${id}`)
         .then(response => response.json())
         .then(data => setObjeto(data))
@@ -60,6 +60,7 @@ function Team() {
             .then(response => response.json())
             .then(data => setListaObjetos(data))
             .catch(err => setAlerta({ status: "error", message: err }))
+        setCarregando(false);
     }
 
     const remover = async objeto => {
@@ -87,7 +88,7 @@ function Team() {
             recuperar, acaoCadastrar, 
             handleChange
         }}>
-            <Tabela />
+            { !carregando ? <Tabela /> : <Carregando/> }
             <Form/>
         </TeamContext.Provider>
     )

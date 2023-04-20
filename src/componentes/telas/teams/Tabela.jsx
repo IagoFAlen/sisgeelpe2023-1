@@ -11,7 +11,7 @@ function Tabela() {
             <h1>Listagem de Teams</h1>
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalEdicao"
             onClick={ () => {
-                setObjeto({id : 0, nome : "" , descricao : "", sigla : ""});
+                setObjeto({id : 0, teamname : "" , elos : "", dateofestabliishment : "", teamoverall: "", coins: "", cresturl: "" });
                 setEditar(false);
                 setAlerta({status : "", message : ""});
             }}>
@@ -53,12 +53,12 @@ function Tabela() {
                                         </button>
                                     </td>
                                     <td>{objeto.id}</td>
-                                    <td>{objeto.teamName}</td>
+                                    <td>{objeto.teamname}</td>
                                     <td>{objeto.elos}</td>
-                                    <td>{objeto.dateOfEstablishment}</td>
-                                    <td>{objeto.teamOverAll}</td>
+                                    <td>{objeto.dateofestablishment}</td>
+                                    <td>{objeto.teamoverAll}</td>
                                     <td>{objeto.coins}</td>
-                                    <td>{objeto.crestURL}</td>
+                                    <td>{objeto.cresturl}</td>
                                 </tr>
                             ))}
                         </tbody>
