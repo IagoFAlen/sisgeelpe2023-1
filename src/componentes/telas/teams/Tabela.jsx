@@ -52,7 +52,7 @@ function Tabela() {
                                             <i className="bi bi-trash3" />
                                         </button>
                                     </td>
-                                    <td>{objeto.id}</td>
+                                    <td scope="row">{objeto.id}</td>
                                     <td>{objeto.teamname}</td>
                                     <td>{objeto.elos}</td>
                                     <td>{objeto.dateofestablishment}</td>

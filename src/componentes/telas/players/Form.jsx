@@ -29,18 +29,16 @@ function Form() {
                 requirido={false} msgvalido="Gênero OK"
                 msginvalido="" readonly={false}
                 maxCaracteres={50} />
-            <CampoEntrada id="txtHeight" label="Altura" tipo="text"
+            <CampoEntrada id="txtHeight" label="Altura" tipo="number"
                 name="height" value={objeto.height} onchange={handleChange}
                 requirido={false} msgvalido="Altura OK"
                 msginvalido="" readonly={false}
-                maxCaracteres={10}
-                step="0.01" />
-            <CampoEntrada id="txtWeight" label="Peso" tipo="text"
+                maxCaracteres={10} />
+            <CampoEntrada id="txtWeight" label="Peso" tipo="number"
                 name="weight" value={objeto.weight} onchange={handleChange}
                 requirido={false} msgvalido="Peso OK"
                 msginvalido="" readonly={false}
-                maxCaracteres={10}
-                step="0.01" />
+                maxCaracteres={10} />
             <CampoEntrada id="txtAge" label="Idade" tipo="number"
                 name="age" value={objeto.age} onchange={handleChange}
                 requirido={false} msgvalido="Idade OK"
