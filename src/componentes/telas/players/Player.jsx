@@ -28,6 +28,21 @@ function Player() {
         .catch(err => setAlerta({ status: "error", message: err }));
     }
 
+    const recuperaPlayers = async () => {
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/players`)
+            .then(response => response.json())
+            .then(data => setListaObjetos(data))
+            .catch(err => setAlerta({ status: "error", message: err }))
+        setCarregando(false);
+    }
+
+    const recuperaTeams = async () => {
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams`)
+            .then(response => response.json())
+            .then(data => setListaTeams(data))
+            .catch(err => setAlerta({ status: "error", message: err }))
+    }
+
     const acaoCadastrar = async e => {
         e.preventDefault();
         const metodo =  editar ? "PUT" : "POST";
@@ -57,21 +72,7 @@ function Player() {
         setObjeto({...objeto, [name] : value});
     }
  
-    const recuperaPlayers = async () => {
-        await fetch(`${process.env.REACT_APP_ENDERECO_API}/players`)
-            .then(response => response.json())
-            .then(data => setListaObjetos(data))
-            .catch(err => setAlerta({ status: "error", message: err }))
-        setCarregando(false);
-    }
-
-    const recuperaTeams = async () => {
-        await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams`)
-            .then(response => response.json())
-            .then(data => setListaTeams(data))
-            .catch(err => setAlerta({ status: "error", message: err }))
-    }
-
+    
     const remover = async objeto => {
         if (window.confirm('Deseja remover este objeto?')) {
             await
