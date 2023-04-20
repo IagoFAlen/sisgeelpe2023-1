@@ -32,7 +32,7 @@ function Player() {
         e.preventDefault();
         const metodo =  editar ? "PUT" : "POST";
         try {
-            await fetch(`${process.env.REACT_APP_ENDERECO_API}/Players`,
+            await fetch(`${process.env.REACT_APP_ENDERECO_API}/players`,
             {
                 method : metodo,
                 headers : { "Content-Type" : "application/json"},
