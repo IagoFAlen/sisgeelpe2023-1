@@ -52,10 +52,6 @@ function Team() {
     const handleChange = (e) => {
         const name = e.target.name;
         const value = e.target.value;
-
-        if(name === "elos" || name === "teamOverAll" || name === "coins"){
-            value = parseInt(value);
-        }
         
         setObjeto({...objeto, [name] : value});
     }
