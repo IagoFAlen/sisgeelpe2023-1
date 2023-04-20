@@ -14,7 +14,7 @@ function Player() {
         weight: "", age: "", 
         latitude: "", longitude: "",
         profileIconURL: "", overall: "",
-        mainPosition: "", secondPosition: "",
+        mainposition: "", secondposition: "",
         elos: "", team: "",
         preDefinedGroupID: "", avaliability: ""
     });

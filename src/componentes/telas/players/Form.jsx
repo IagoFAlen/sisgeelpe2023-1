@@ -53,12 +53,12 @@ function Form() {
                 maxCaracteres={20}
                 step="0.01" />
             <CampoEntrada id="txtMainPosition" label="Posição Principal" tipo="number"
-                name="mainPosition" value={objeto?.mainPosition} onchange={handleChange}
+                name="mainposition" value={objeto?.mainposition} onchange={handleChange}
                 requirido={true} msgvalido="Posição Principal OK"
                 msginvalido="Por favor, selecione uma posição válida." readonly={false}
                 maxCaracteres={10} />
             <CampoEntrada id="txtSecondPosition" label="Segunda Posição" tipo="number"
-                name="secondPosition" value={objeto?.secondPosition} onchange={handleChange}
+                name="secondposition" value={objeto?.secondposition} onchange={handleChange}
                 requirido={true} msgvalido="Segunda Posição OK"
                 msginvalido="Por favor, selecione uma posição válida." readonly={false}
                 maxCaracteres={10} />
