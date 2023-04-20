@@ -46,12 +46,18 @@ function Form() {
                 requirido={false} msgvalido="Idade OK"
                 msginvalido="" readonly={false}
                 maxCaracteres={10} />
-            <CampoEntrada id="txtLatitude" label="Latitude" tipo="text"
+            <CampoEntrada id="txtLatitude" label="Latitude" tipo="number"
                 name="latitude" value={objeto.latitude} onchange={handleChange}
                 requirido={false} msgvalido="Latitude OK"
                 msginvalido="" readonly={false}
                 maxCaracteres={20}
-                step="0.01" />
+            />
+            <CampoEntrada id="txtLongitude" label="Longitude" tipo="number"
+                name="longitude" value={objeto.longitude} onchange={handleChange}
+                requirido={false} msgvalido="Longitude OK"
+                msginvalido="" readonly={false}
+                maxCaracteres={20}
+            />
             <CampoEntrada id="txtMainPosition" label="Posição Principal" tipo="number"
                 name="mainposition" value={objeto.mainposition} onchange={handleChange}
                 requirido={true} msgvalido="Posição Principal OK"
@@ -62,12 +68,7 @@ function Form() {
                 requirido={true} msgvalido="Segunda Posição OK"
                 msginvalido="Por favor, selecione uma posição válida." readonly={false}
                 maxCaracteres={10} />
-            <CampoEntrada id="txtLongitude" label="Longitude" tipo="text"
-                name="longitude" value={objeto.longitude} onchange={handleChange}
-                requirido={false} msgvalido="Longitude OK"
-                msginvalido="" readonly={false}
-                maxCaracteres={20}
-                step="0.01" />
+
             <CampoEntrada id="txtProfileIconURL" label="URL do Ícone de Perfil" tipo="text"
                 name="profileIconURL" value={objeto.profileIconURL} onchange={handleChange}
                 requirido={false} msgvalido="URL do Ícone de Perfil OK"
