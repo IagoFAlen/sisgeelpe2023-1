@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import TeamContext from "./TeamContext";
 import Tabela from "./Tabela";
 import Form from "./Form";
+import Carregando from "../../comuns/Carregando";
 
 function Team() {
 
