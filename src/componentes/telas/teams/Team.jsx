@@ -11,8 +11,8 @@ function Team() {
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({
         id: "",
-        teamName: "",
-        crestURL: ""
+        teamname: "",
+        cresturl: ""
       });
       const [ carregando, setCarregando ] = useState();
 

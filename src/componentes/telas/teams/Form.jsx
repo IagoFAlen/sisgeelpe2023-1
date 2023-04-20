@@ -19,12 +19,12 @@ function Form() {
                 msginvalido="" readonly={true}
                 maxCaracteres={5} />
             <CampoEntrada id="txtNome" label="Nome" tipo="text"
-                name="teamName" value={objeto.teamName} onchange={handleChange}
+                name="teamName" value={objeto.teamname} onchange={handleChange}
                 requirido={true} msgvalido="Nome OK"
                 msginvalido="Informe o nome" readonly={false}
                 maxCaracteres={50} />
             <CampoEntrada id="txtCrestURL" label="URL do Escudo" tipo="text"
-                name="crestURL" value={objeto.crestURL} onchange={handleChange}
+                name="crestURL" value={objeto.cresturl} onchange={handleChange}
                 requirido={true} msgvalido="URL do Escudo OK"
                 msginvalido="Informe a URL do escudo" readonly={false}
                 maxCaracteres={255} />
