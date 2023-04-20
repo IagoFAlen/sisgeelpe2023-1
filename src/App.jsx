@@ -5,8 +5,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import {BrowserRouter as Router, Routes , Route } from 'react-router-dom'
 import Menu from './componentes/Menu'
 import Home from './componentes/Home'
-import Predio from './componentes/telas/predios/Predio'
-
+import Team from './componentes/telas/teams/Team'
+import Player from './componentes/telas/players/Player'
 
 function App() {
   return (
@@ -14,7 +14,8 @@ function App() {
       <Menu/>
       <Routes>
         <Route exact="true" path='/' element={<Home/>}/>
-        <Route exact="true" path='/predios' element={<Predio/>}/>
+        <Route exact="true" path='/teams' element={<Team/>}/>
+        <Route exact="true" path='/players' element={<Player/>}/>
       </Routes>
     </Router>
   );

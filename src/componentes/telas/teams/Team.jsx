@@ -1,20 +1,26 @@
 import { useState, useEffect } from "react";
-import PredioContext from "./PredioContext";
+import TeamContext from "./TeamContext";
 import Tabela from "./Tabela";
 import Form from "./Form";
 
-function Predio() {
+function Team() {
 
     const [alerta, setAlerta] = useState({ status: "", message: "" });
     const [listaObjetos, setListaObjetos] = useState([]);
     const [editar, setEditar] = useState(false);
     const [objeto, setObjeto] = useState({
-        codigo: "", nome: "",
-        descricao: "", sigla: ""
-    });
+        id: "",
+        teamName: "",
+        elos: "",
+        dateOfEstablishment: "",
+        teamOverAll: "",
+        coins: "",
+        crestURL: ""
+      });
+      
 
-    const recuperar = async codigo => {
-        await fetch(`${process.env.REACT_APP_ENDERECO_API}/predios/${codigo}`)
+    const recuperar = async id => {
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams/${id}`)
         .then(response => response.json())
         .then(data => setObjeto(data))
         .catch(err => setAlerta({ status: "error", message: err }));
@@ -24,7 +30,7 @@ function Predio() {
         e.preventDefault();
         const metodo =  editar ? "PUT" : "POST";
         try {
-            await fetch(`${process.env.REACT_APP_ENDERECO_API}/predios`,
+            await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams`,
             {
                 method : metodo,
                 headers : { "Content-Type" : "application/json"},
@@ -40,7 +46,7 @@ function Predio() {
         } catch(err){
             setAlerta({ status: "error", message: err })
         }
-        recuperaPredios();
+        recuperaTeams();
     }
 
     const handleChange = (e) => {
@@ -49,8 +55,8 @@ function Predio() {
         setObjeto({...objeto, [name] : value});
     }
  
-    const recuperaPredios = async () => {
-        await fetch(`${process.env.REACT_APP_ENDERECO_API}/predios`)
+    const recuperaTeams = async () => {
+        await fetch(`${process.env.REACT_APP_ENDERECO_API}/teams`)
             .then(response => response.json())
             .then(data => setListaObjetos(data))
             .catch(err => setAlerta({ status: "error", message: err }))
@@ -59,23 +65,23 @@ function Predio() {
     const remover = async objeto => {
         if (window.confirm('Deseja remover este objeto?')) {
             await
-                fetch(`${process.env.REACT_APP_ENDERECO_API}/predios/${objeto.codigo}`,
+                fetch(`${process.env.REACT_APP_ENDERECO_API}/teams/${objeto.id}`,
                     { method: "DELETE" })
                     .then(response => response.json())
                     .then(json => setAlerta({ status: json.status, message: json.message }))
-            recuperaPredios();
+            recuperaTeams();
         }
     }
 
     useEffect(() => {
-        recuperaPredios();
+        recuperaTeams();
     }, []);
 
     return (
-        <PredioContext.Provider value={{
+        <TeamContext.Provider value={{
             alerta, setAlerta,
             listaObjetos, setListaObjetos,
-            recuperaPredios, remover,
+            recuperaTeams, remover,
             objeto, setObjeto,
             editar, setEditar, 
             recuperar, acaoCadastrar, 
@@ -83,9 +89,9 @@ function Predio() {
         }}>
             <Tabela />
             <Form/>
-        </PredioContext.Provider>
+        </TeamContext.Provider>
     )
 
 }
 
-export default Predio;
+export default Team;

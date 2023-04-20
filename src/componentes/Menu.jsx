@@ -21,7 +21,10 @@ const Menu = () => {
                                 </a>
                                 <ul className="dropdown-menu">
                                     <li>
-                                        <NavLink className="dropdown-item" to="/predios">Prédios</NavLink>
+                                        <NavLink className="dropdown-item" to="/teams">Team</NavLink>
+                                    </li>
+                                    <li>
+                                        <NavLink className="dropdown-item" to="/players">Players</NavLink>
                                     </li>
                                 </ul>
                             </li>
