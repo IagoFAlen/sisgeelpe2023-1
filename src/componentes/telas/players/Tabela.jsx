@@ -13,7 +13,7 @@ function Tabela() {
             onClick={ () => {
                 setObjeto({id : 0, username : "" , gender : "", height : "", weight: "",
                            age: "", latitude: "", longitude: "", profileIconURL: "", overall: "",
-                           mainPosition: "", secondPosition: "", elos: "", team : "", preDefinedGrouID: "",
+                           mainposition: "", secondposition: "", elos: "", team : "", preDefinedGrouID: "",
                            avaliability: ""  });
                 setEditar(false);
                 setAlerta({status : "", message : ""});
@@ -73,8 +73,8 @@ function Tabela() {
                                     <td>{objeto.longitude}</td>
                                     <td>{objeto.profileIconURL}</td>
                                     <td>{objeto.overall}</td>
-                                    <td>{objeto.mainPosition}</td>
-                                    <td>{objeto.secondPosition}</td>
+                                    <td>{objeto.mainposition}</td>
+                                    <td>{objeto.secondposition}</td>
                                     <td>{objeto.elos}</td>
                                     <td>{objeto.team}</td>
                                     <td>{objeto.preDefinedGrouID}</td>
