@@ -18,7 +18,7 @@ function Player() {
         elos: "", team: "",
         preDefinedGroupID: "", avaliability: ""
     });
-    const [ carregando, setCarregando ] = useState();
+    const [ carregando, setCarregando ] = useState(true);
     const [ listaTeams, setListaTeams ] = useState([]);
 
     const recuperar = async id => {
