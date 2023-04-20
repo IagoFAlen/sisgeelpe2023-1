@@ -11,10 +11,10 @@ function Team() {
     const [objeto, setObjeto] = useState({
         id: "",
         teamname: "",
-        elos: null,
+        elos: parseInt(""),
         dateofestablishment: "",
-        teamoverall: null,
-        coins: null,
+        teamoverall: parseInt(""),
+        coins: parseInt(""),
         cresturl: ""
       });
       const [ carregando, setCarregando ] = useState();
