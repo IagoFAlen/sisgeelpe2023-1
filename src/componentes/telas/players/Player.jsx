@@ -3,6 +3,7 @@ import PlayerContext from "./PlayerContext";
 import Tabela from "./Tabela";
 import Form from "./Form";
 import Carregando from "../../comuns/Carregando";
+
 function Player() {
 
     const [alerta, setAlerta] = useState({ status: "", message: "" });
@@ -93,7 +94,7 @@ function Player() {
             recuperar, acaoCadastrar, 
             handleChange, listaTeams
         }}>
-            { !carregando ? <Tabela /> : <Carregando/> }
+            <Tabela />
             <Form/>
         </PlayerContext.Provider>
     )

@@ -86,7 +86,7 @@ function Team() {
             recuperar, acaoCadastrar, 
             handleChange
         }}>
-            { !carregando ? <Tabela /> : <Carregando/> }
+            <Tabela />
             <Form/>
         </TeamContext.Provider>
     )

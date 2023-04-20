@@ -29,7 +29,7 @@ function Form() {
                 requirido={false} msgvalido="Gênero OK"
                 msginvalido="" readonly={false}
                 maxCaracteres={50} />
-            <CampoSelect id="selecTeam" label="Time"
+            <CampoSelect id="selectTeam" label="Time"
                 name="team" value={objeto.team} onchange={handleChange}
                 requirido={true} msgvalido="Time OK"
                 msginvalido="Selecione o time">
