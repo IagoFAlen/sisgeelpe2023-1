@@ -1,6 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from 'react-router-dom';
 
-const Menu = () => {
+const MenuPublico = () => {
 
     return (
         <>
@@ -15,25 +15,16 @@ const Menu = () => {
                             <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/">Home</NavLink>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Manutenções
-                                </a>
-                                <ul className="dropdown-menu">
-                                    <li>
-                                        <NavLink className="dropdown-item" to="/teams">Team</NavLink>
-                                    </li>
-                                    <li>
-                                        <NavLink className="dropdown-item" to="/players">Players</NavLink>
-                                    </li>
-                                </ul>
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" aria-current="page" exact to="/login">Login</NavLink>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
+            <Outlet />
         </>
     )
 }
 
-export default Menu;
+export default MenuPublico;

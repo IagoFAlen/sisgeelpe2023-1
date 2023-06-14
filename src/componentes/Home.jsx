@@ -1,6 +1,6 @@
 const Home = () => (
     <div>
-        <h1>Trabalho da Primeira Etapa - Iago Figueira - PWA</h1>
+        <h1>Trabalho da Segunda Etapa - Iago Figueira - JWT</h1>
     </div>
 )
 
