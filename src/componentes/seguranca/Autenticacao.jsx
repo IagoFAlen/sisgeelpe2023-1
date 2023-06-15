@@ -8,7 +8,7 @@ const pegaAutenticacao = () => {
     const localStorageAutenticacao = localStorage.getItem(NAMEAPP + '/autenticacao');
     const autenticacao = localStorageAutenticacao ?
         JSON.parse(localStorageAutenticacao) : null;
-    console.log("autenticação: " + JSON.stringify(autenticacao));
+  //  console.log("autenticação: " + JSON.stringify(autenticacao));
     if (autenticacao === null) {
         return null;
     }
@@ -18,11 +18,11 @@ const pegaAutenticacao = () => {
         var decoded = jwt_decode(autenticacao.token);
         // verificando se o token não expirou
         if (decoded.exp <= Math.floor(new Date() / 1000)) {
-            console.log('Token expirado');
+          //  console.log('Token expirado');
             logout();
             return null;
         } else {
-            console.log('Token não expirado');
+            //console.log('Token não expirado');
             //setAutenticacao(autenticacao);
             return autenticacao;
         }
@@ -35,7 +35,7 @@ const gravaAutenticacao = (json) => {
     const user = decodificado.user;
     json.name_user = user.name;
     json.email_user = user.email;
-    console.log("autenticacao no grava autenticacao: " + JSON.stringify(json));
+   // console.log("autenticacao no grava autenticacao: " + JSON.stringify(json));
     localStorage.setItem(NAMEAPP + '/autenticacao', JSON.stringify(json));
 }
 

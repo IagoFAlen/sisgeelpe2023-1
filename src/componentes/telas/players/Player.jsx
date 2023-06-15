@@ -89,7 +89,7 @@ function Player() {
                     }
                     throw new Error('Erro código: ' + response.status)
                 })
-                .then(data => setListaObjetos(data))
+                .then(data => setListaTeams(data))
                 .catch(err => setAlerta({ "status": "error", "message": err }))
             setCarregando(false);
         } catch (err) {
@@ -184,4 +184,4 @@ function Player() {
 
 }
 
-export default Player;
+export default WithAuth(Player);
